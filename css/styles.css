@@ -1,0 +1,120 @@
+/* Box Model Fix */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+.wrapper {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    background-color: #eaeaea;
+}
+
+header .wrapper{
+    height:127px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header img {
+    height: 50px;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 23px;
+    padding-left: 23px;
+    position: relative;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #494949;
+}
+
+header nav ul li:first-of-type{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+header nav ul li::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 2px;
+    height:100%;
+    background-color: black;
+    left: 0;
+}
+
+header nav ul li:first-of-type::before{
+    display: none;
+}
+
+.banner {
+    background: url(/img/bg-main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 768px;
+    color: white;
+}
+
+.banner img{
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+.banner .wrapper {
+    padding-top: 260px;
+
+}
+
+.banner h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.banner p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    max-width: 571px;
+    margin-top: 25px;
+}
+
+.banner button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    border: 2px solid white;
+    width:190px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    margin-top: 30px;
+}
