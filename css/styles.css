@@ -89,7 +89,6 @@ header nav ul li:first-of-type::before{
 
 .banner .wrapper {
     padding-top: 260px;
-
 }
 
 .banner h1{
@@ -117,4 +116,110 @@ header nav ul li:first-of-type::before{
     background-color: transparent;
     color: white;
     margin-top: 30px;
+}
+
+.progress {
+    height: 980px;
+    background-color: #eaeaea;
+}
+
+.progress h2 {  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    text-transform: uppercase;
+    padding-top: 125px;
+    text-align: center;
+    position: relative;
+}
+
+.progress h2::after, .progress h2::before {
+    content:'';
+    background-image: url(/img/curvy-line.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 102px;
+    height: 28px;
+    display: inline-block;
+}
+
+.progress h2::after {
+    margin-left: 25px;
+}
+
+.progress h2::before {
+    margin-right: 25px;
+}
+
+.progress h2+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #959595;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.progress ul{
+    padding-left: 0;
+    margin-top: 48px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.progress li{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.progress li::before{
+    content: '';
+    width: 2px;
+    height: 15px;
+    background-color:#494949;
+    position: absolute;
+    margin-left: -20px;
+}
+
+.progress li:first-of-type::before{
+    display: none;
+}
+
+.progress li:first-of-type {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.progress li.active {
+    border-bottom: 4px solid #ee252d;
+    
+}
+
+.progress li.active::after {
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom: 7px solid #ee252d;
+    margin: 0 auto;
+}
+
+.steps {
+    background-color:white;
+    height: 405px;
+    width: 100%;
+    margin-top: 44px;
 }
