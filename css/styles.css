@@ -3,7 +3,9 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
     margin: 0px;
 }
@@ -19,8 +21,8 @@ header {
     background-color: #eaeaea;
 }
 
-header .wrapper{
-    height:127px;
+header .wrapper {
+    height: 127px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,7 +34,7 @@ header img {
     height: 50px;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -44,16 +46,17 @@ header nav ul li {
     position: relative;
 }
 
-header nav ul li a{
+header nav ul li a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 17px;
     text-transform: uppercase;
     color: #494949;
+    cursor: pointer;
 }
 
-header nav ul li:first-of-type{
+header nav ul li:first-of-type {
     margin-left: 0;
     padding-left: 0;
 }
@@ -63,12 +66,12 @@ header nav ul li::before {
     display: block;
     content: '';
     width: 2px;
-    height:100%;
+    height: 100%;
     background-color: black;
     left: 0;
 }
 
-header nav ul li:first-of-type::before{
+header nav ul li:first-of-type::before {
     display: none;
 }
 
@@ -81,7 +84,7 @@ header nav ul li:first-of-type::before{
     color: white;
 }
 
-.banner img{
+.banner img {
     position: absolute;
     right: 0;
     top: 50px;
@@ -91,14 +94,14 @@ header nav ul li:first-of-type::before{
     padding-top: 260px;
 }
 
-.banner h1{
+.banner h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     text-transform: capitalize;
     margin: 0;
 }
 
-.banner p{
+.banner p {
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
     max-width: 571px;
@@ -111,19 +114,20 @@ header nav ul li:first-of-type::before{
     font-size: 17px;
     text-transform: uppercase;
     border: 2px solid white;
-    width:190px;
+    width: 190px;
     height: 50px;
     background-color: transparent;
     color: white;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .progress {
-    height: 980px;
+    height: 990px;
     background-color: #eaeaea;
 }
 
-.progress h2 {  
+.progress h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 45px;
@@ -133,11 +137,12 @@ header nav ul li:first-of-type::before{
     position: relative;
 }
 
-.progress h2::after, .progress h2::before {
-    content:'';
+.progress h2::after,
+.progress h2::before {
+    content: '';
     background-image: url(/img/curvy-line.svg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     width: 102px;
     height: 28px;
     display: inline-block;
@@ -157,19 +162,18 @@ header nav ul li:first-of-type::before{
     line-height: 30px;
     color: #959595;
     text-align: center;
-    margin-top: 25px;
 }
 
-.progress ul{
+.progress ul {
     padding-left: 0;
-    margin-top: 48px;
+    margin-top: 40px;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.progress li{
+.progress li {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 15px;
@@ -178,18 +182,19 @@ header nav ul li:first-of-type::before{
     padding-left: 20px;
     padding-bottom: 20px;
     position: relative;
+    cursor: pointer;
 }
 
-.progress li::before{
+.progress li::before {
     content: '';
     width: 2px;
     height: 15px;
-    background-color:#494949;
+    background-color: #494949;
     position: absolute;
     margin-left: -20px;
 }
 
-.progress li:first-of-type::before{
+.progress li:first-of-type::before {
     display: none;
 }
 
@@ -200,11 +205,11 @@ header nav ul li:first-of-type::before{
 
 .progress li.active {
     border-bottom: 4px solid #ee252d;
-    
+
 }
 
 .progress li.active::after {
-    content:'';
+    content: '';
     display: block;
     position: absolute;
     bottom: 0;
@@ -218,8 +223,101 @@ header nav ul li:first-of-type::before{
 }
 
 .steps {
-    background-color:white;
+    background-color: white;
     height: 405px;
     width: 100%;
     margin-top: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 55px;
+    padding-right: 70px;
+    padding-top: 70px;
+}
+
+
+
+.steps article p:first-of-type {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 120px;
+    position: relative;
+}
+
+.steps article p:first-of-type::after {
+    content: '';
+    background-repeat: none;
+    position: absolute;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.steps article:first-of-type p:first-of-type::after {
+    background-image: url(/img/icon1.png);
+    width: 126px;
+    height: 71px;
+    top: calc(50% - 35px);
+}
+
+.steps article:nth-of-type(2) p:first-of-type::after {
+    background-image: url(/img/icon2.png);
+    width: 184px;
+    height: 81px;
+    top: calc(50% - 40px);
+}
+
+.steps article:nth-of-type(3) p:first-of-type::after {
+    background-image: url(/img/icon3.png);
+    width: 142px;
+    height: 68px;
+    top: calc(50% - 34px);
+}
+
+.steps article h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.steps article h3+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 250px;
+    margin-top: 15px;
+}
+
+.progress button {
+    width: 469px;
+    height: 93px;
+    background-image: url(/img/shape.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    background-color: transparent;
+    margin: 70px auto 0;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    height: 105px;
+    background: url(/img/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #eaeaea;
+    text-align: center;
+    padding-top: 45px;
+    text-transform: uppercase;
 }
