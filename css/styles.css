@@ -11,7 +11,8 @@ html {
 }
 
 .wrapper {
-    width: 1200px;
+    width: 90vw;
+    max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
     position: relative;
@@ -320,4 +321,93 @@ footer {
     text-align: center;
     padding-top: 45px;
     text-transform: uppercase;
+}
+
+@media (max-width:1200px) {
+    header img {
+        height: 45px;
+    }
+
+    header .wrapper {
+        height: 100px;
+    }
+
+    .banner {
+        height: calc(100vh - 45px);
+        max-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .banner .wrapper {
+        padding: 0;
+    }
+
+    .banner img {
+        display: none;
+    }
+
+    .progress {
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+
+    .progress button {
+        margin-top: 50px;
+    }
+
+    .steps {
+        display: inline-flex;
+        gap: 30px;
+        height: fit-content;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 55px;
+        position: relative;
+    }
+
+}
+
+@media (max-width:900px) {
+    header .wrapper{
+        flex-direction: column;
+        padding: 20px 0;
+        height: auto;
+        }
+
+        header nav ul{
+            padding: 20px 0 0 0;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .progress h2::after, .progress h2::before {
+            display: none;
+        }
+
+        .progress h2{
+            padding-top: 80px;
+        }
+}
+
+@media (max-width:600px) {
+
+    .banner {
+        height: calc(100vh - 185px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li, header nav ul li:first-of-type{
+        margin-left: 0px;
+        padding-left: 20px;
+    }
+    header nav ul li:first-of-type::before {
+        display:block;
+    }
 }
