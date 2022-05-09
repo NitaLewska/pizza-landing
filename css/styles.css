@@ -77,7 +77,7 @@ header nav ul li:first-of-type::before {
 }
 
 .banner {
-    background: url(../../img/bg-main.png);
+    background: url(../img/bg-main.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -141,7 +141,7 @@ header nav ul li:first-of-type::before {
 .progress h2::after,
 .progress h2::before {
     content: '';
-    background-image: url(../../img/curvy-line.svg);
+    background-image: url(/img/curvy-line.svg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 102px;
